@@ -155,7 +155,7 @@ begin
         begin
             ap[0] <= (ap[0] == 0)? 0 : (AXIS_cs == AXIS_IDLE)? 1 : 0;  // ap_start, reset when start AXI_stream data transfer
             ap[1] <= (ap[1] == 1)? 1 : (last_output == 1 && AXIS_cs == AXIS_OUTPUT)? 1 : 0;  // ap_done
-ap[2] <= (ap[2] == 1)? (ap[0] == 1)? 0 : 1 : (ss_tlast == 1 && AXIS_cs == AXIS_IDLE)? 1 : 0;  // ap_idle
+            ap[2] <= (ap[2] == 1)? (ap[0] == 1)? 0 : 1 : (ss_tlast == 1 && AXIS_cs == AXIS_IDLE)? 1 : 0;  // ap_idle
         end
     end
 end
