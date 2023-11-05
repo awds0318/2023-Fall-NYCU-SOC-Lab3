@@ -96,9 +96,6 @@ bram user_bram (
          .A0(wbs_adr_i)
      );
 
-
-
-
 always @(posedge wb_clk_i)
 begin
     if (wb_rst_i)
@@ -126,11 +123,6 @@ begin
         end
     end
 end
-
-
-
 endmodule
-
-
 
 `default_nettype wire
