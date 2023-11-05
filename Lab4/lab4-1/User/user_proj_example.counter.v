@@ -39,7 +39,6 @@
 `define MPRJ_IO_PADS 32
 `endif
 
-
         module user_proj_example #(
             parameter BITS = 32,
             parameter DELAYS=10
@@ -75,9 +74,6 @@
             output reg [2:0] irq
         );
 
-
-
-
 wire            valid;
 wire [3:0]      we;
 wire [BITS-1:0] rdata; //read data from bram
@@ -85,7 +81,6 @@ reg  [BITS-1:0] count;
 
 assign valid = (wbs_stb_i == 1) && (wbs_cyc_i == 1) && (wbs_adr_i[31:24] == 8'h38);
 assign we    = {4{wbs_we_i & valid}};
-
 
 bram user_bram (
          .CLK(wb_clk_i),
@@ -106,14 +101,15 @@ begin
     end
     else
     begin
-        wbs_ack_o <= (count == DELAYS) ? 1 : 0;
         wbs_dat_o <= rdata;
         if(count == DELAYS)
         begin
+            wbs_ack_o <= 1;
             count <= 0;
         end
         else
         begin
+            wbs_ack_o <= 0;
             if(valid == 1 && wbs_ack_o != 1)
             begin
                 count <= count + 1;
