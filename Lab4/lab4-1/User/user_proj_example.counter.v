@@ -96,20 +96,15 @@ begin
     if (wb_rst_i)
     begin
         count <= 0;
-        wbs_ack_o <= 0;
-        wbs_dat_o <= 0;
     end
     else
     begin
-        wbs_dat_o <= rdata;
         if(count == DELAYS)
         begin
-            wbs_ack_o <= 1;
             count <= 0;
         end
         else
         begin
-            wbs_ack_o <= 0;
             if(valid == 1 && wbs_ack_o != 1)
             begin
                 count <= count + 1;
@@ -117,6 +112,37 @@ begin
             else
                 count <= count;
         end
+    end
+end
+
+always @(posedge wb_clk_i)
+begin
+    if (wb_rst_i)
+    begin
+        wbs_ack_o <= 0;
+    end
+    else
+    begin
+        if(count == DELAYS)
+        begin
+            wbs_ack_o <= 1;
+        end
+        else
+        begin
+            wbs_ack_o <= 0;
+        end
+    end
+end
+
+always @(posedge wb_clk_i)
+begin
+    if (wb_rst_i)
+    begin
+        wbs_dat_o <= 0;
+    end
+    else
+    begin
+        wbs_dat_o <= rdata;
     end
 end
 endmodule
