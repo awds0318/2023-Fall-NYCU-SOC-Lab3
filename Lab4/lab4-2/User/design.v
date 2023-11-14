@@ -68,15 +68,17 @@ reg  [31:0]  data_length;
 reg  [3:0]  fir_compute_count;
 reg  [3:0]  first_data_index;
 wire [3:0]  data_index;
+
 reg         ss_tready_reg, sm_tvalid_reg;
 reg         data_reset_done;
 reg         last_output;
+wire signed  [31:0]  Xn, Hn, Yn;
 reg  signed  [31:0]  accumulate;
 
 assign  tap_EN = 1;
-assign  tap_WE = (AXIL_cs == AXIL_WDATA && awaddr >= 32'h0020)? 4'b1111 : 0;
+assign  tap_WE = (AXIL_cs == AXIL_WDATA && awaddr >= 32'h0040)? 4'b1111 : 0;
 assign  tap_Di = wdata;
-assign  tap_A  = (AXIL_cs == AXIL_WDATA && AXIS_cs == AXIS_IDLE)? awaddr - 32'h0020 : (AXIL_cs == AXIL_RADDR && AXIS_cs == AXIS_IDLE)? araddr - 32'h0020 : (fir_compute_count << 2);
+assign  tap_A  = (AXIL_cs == AXIL_WDATA && AXIS_cs == AXIS_IDLE)? awaddr - 32'h0040 : (AXIL_cs == AXIL_RADDR && AXIS_cs == AXIS_IDLE)? araddr - 32'h0040 : (fir_compute_count << 2);
 
 assign  data_EN = 1;
 assign  data_WE = (AXIS_cs == AXIS_IDLE || AXIS_cs == AXIS_FIRST)? 4'b1111:0;
@@ -89,6 +91,9 @@ assign  sm_tdata   = accumulate;
 assign  sm_tlast   = last_output;
 assign  data_index = (first_data_index >= fir_compute_count)? (first_data_index - fir_compute_count) : 11 - (fir_compute_count - first_data_index);
 
+assign  Xn = $signed(data_Do);
+assign  Hn = $signed(tap_Do);
+assign  Yn = accumulate;
 //---------------------------------------------------------------------
 //   AXI_Lite
 //---------------------------------------------------------------------
