@@ -1,4 +1,3 @@
-`timescale 1ns / 1ps
 module fir
        #(  parameter pADDR_WIDTH = 12,
            parameter pDATA_WIDTH = 32,
@@ -55,7 +54,7 @@ reg  [2:0]   AXIL_cs, AXIL_ns;
 
 parameter    AXIS_IDLE       = 'd0;
 parameter    AXIS_FIRST      = 'd1;
-parameter    AXIS_COMPUTE  = 'd2;
+parameter    AXIS_COMPUTE    = 'd2;
 parameter    AXIS_OUTPUT     = 'd3;
 reg  [1:0]   AXIS_cs, AXIS_ns;
 
@@ -161,6 +160,9 @@ begin
             ap[0] <= (ap[0] == 0)? 0 : (AXIS_cs == AXIS_IDLE)? 1 : 0;  // ap_start, reset when start AXI_stream data transfer
             ap[1] <= (ap[1] == 1)? 1 : (last_output == 1 && AXIS_cs == AXIS_OUTPUT)? 1 : 0;  // ap_done
 ap[2] <= (ap[2] == 1)? (ap[0] == 1)? 0 : 1 : (ss_tlast == 1 && AXIS_cs == AXIS_IDLE)? 1 : 0;  // ap_idle
+            ap[3] <= 0;
+            ap[4] <= (AXIS_cs == AXIS_FIRST)? 1 : 0;
+            ap[5] <= (AXIS_cs == AXIS_OUTPUT)? 1 : 0;
         end
     end
 end

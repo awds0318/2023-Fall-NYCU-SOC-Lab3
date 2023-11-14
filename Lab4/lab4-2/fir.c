@@ -29,13 +29,7 @@ int *__attribute__((section(".mprjram"))) fir()
 
 	for (int n = 0; n < 64; n++)
 	{
-		// while ((ap >> 4) & 1 != 1)
-		// {
-		// } // wait until Xn [4] is ready
 		Xn = n;
-		// while ((ap >> 5) & 1 != 1)
-		// {
-		// } // wait until Yn [5] is ready
 		ans[n] = Yn;
 	}
 
