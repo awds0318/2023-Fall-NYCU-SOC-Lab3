@@ -1,0 +1,15 @@
+../../rtl/user/user_proj_example.counter.v:300: warning: Port 4 (awaddr) of fir expects 12 bits, got 32.
+../../rtl/user/user_proj_example.counter.v:300:        : Pruning 20 high bits of the expression.
+../../rtl/user/user_proj_example.counter.v:300: warning: Port 10 (araddr) of fir expects 12 bits, got 32.
+../../rtl/user/user_proj_example.counter.v:300:        : Pruning 20 high bits of the expression.
+../../rtl/user/user_proj_example.counter.v:300: warning: Port 24 (tap_A) of fir expects 12 bits, got 32.
+../../rtl/user/user_proj_example.counter.v:300:        : Padding 20 high bits of the expression.
+../../rtl/user/user_proj_example.counter.v:300: warning: Port 29 (data_A) of fir expects 12 bits, got 32.
+../../rtl/user/user_proj_example.counter.v:300:        : Padding 20 high bits of the expression.
+Reading counter_la_fir.hex
+counter_la_fir.hex loaded into memory
+Memory 5 bytes = 0x6f 0x00 0x00 0x0b 0x13
+VCD info: dumpfile counter_la_fir.vcd opened for output.
+LA Test 1 started
+LA Test 2 passed
+
