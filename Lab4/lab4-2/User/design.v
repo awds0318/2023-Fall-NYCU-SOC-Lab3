@@ -98,7 +98,7 @@ assign  Yn = accumulate;
 //---------------------------------------------------------------------
 assign  arready = (AXIL_cs == AXIL_RADDR)? 1 : 0; // AR
 assign  awready = (AXIL_cs == AXIL_WADDR)? 1 : 0; // AW
-assign  rdata   = (AXIL_cs == AXIL_RDATA)? (araddr == 32'h0000)? ap : (araddr == 32'h00010)? data_length : (araddr >= 32'h0020)? tap_Do : 0 : 0; // R
+assign  rdata   = (AXIL_cs == AXIL_RDATA)? (araddr == 32'h0000)? ap : (araddr == 32'h00010)? data_length : tap_Do : tap_Do; // R
 assign  rvalid  = (AXIL_cs == AXIL_RDATA)? 1 : 0; // R
 assign  wready  = (AXIL_cs == AXIL_WDATA)? 1 : 0; // W
 
