@@ -63,8 +63,8 @@ module user_project_wrapper #(
 
     // IOs
     input  [`MPRJ_IO_PADS-1:0] io_in,
-    output reg [`MPRJ_IO_PADS-1:0] io_out,
-    output reg [`MPRJ_IO_PADS-1:0] io_oeb,
+    output  [`MPRJ_IO_PADS-1:0] io_out,
+    output  [`MPRJ_IO_PADS-1:0] io_oeb,
 
     // Analog (direct connection to GPIO pad---use with caution)
     // Note that analog I/O is not available on the 7 lowest-numbered
@@ -76,7 +76,7 @@ module user_project_wrapper #(
     input   user_clock2,
 
     // User maskable interrupt signals
-    output reg [2:0] user_irq
+    output  [2:0] user_irq
 );
 
 /*--------------------------------------*/
@@ -117,14 +117,16 @@ uart uart (
 
     // IO ports
     .io_in  (io_in      ),
-    .io_out (uart_io_out ),
-    .io_oeb (uart_io_oeb ),
+    .io_out (io_out ),
+    .io_oeb (io_oeb ),
 
     // irq
-    .user_irq (uart_user_irq)
+    .user_irq (user_irq)
 );
 
-user_proj_example mprj (
+
+
+exmem mprj (
 `ifdef USE_POWER_PINS
 	.vccd1(vccd1),	// User area 1 1.8V power
 	.vssd1(vssd1),	// User area 1 digital ground
@@ -135,52 +137,19 @@ user_proj_example mprj (
 
     // MGMT SoC Wishbone Slave
 
-    .wbs_cyc_i(exmem_wbs_cyc_i),
-    .wbs_stb_i(exmem_wbs_stb_i),
+    .wbs_cyc_i(wbs_cyc_i),
+    .wbs_stb_i(wbs_stb_i),
     .wbs_we_i (wbs_we_i),
     .wbs_sel_i(wbs_sel_i),
     .wbs_adr_i(wbs_adr_i),
     .wbs_dat_i(wbs_dat_i),
     .wbs_ack_o(exmem_wbs_ack_o),
-    .wbs_dat_o(exmem_wbs_dat_o),
-
-    // Logic Analyzer
-
-    .la_data_in(la_data_in),
-    .la_data_out(la_data_out),
-    .la_oenb (la_oenb),
-
-    // IO Pads
-
-    // .io_in (io_in),
-    .io_out(exmem_io_out),
-    .io_oeb(exmem_io_oeb),
-
-    // IRQ
-    .irq(exmem_user_irq)
+    .wbs_dat_o(exmem_wbs_dat_o)
 );
 
 /*--------------------------------------*/
 /*      Wishbone Decoder here           */
 /*--------------------------------------*/
-always @(*) begin
-    exmem_wbs_cyc_i = (wbs_adr_i[31:24] == 'h38) ? wbs_cyc_i : 0;
-    exmem_wbs_stb_i = (wbs_adr_i[31:24] == 'h38) ? wbs_stb_i : 0;
-end
-
-always @(*) begin
-    if (wbs_adr_i[31:24] == 'h38) begin
-        io_out      = exmem_io_out;
-        io_oeb      = exmem_io_oeb;
-        user_irq    = exmem_user_irq;
-    end else begin
-        io_out      = uart_io_out;
-        io_oeb      = uart_io_oeb;
-        user_irq    = uart_user_irq;
-    end
-end
-
-// assign exmem_wbs_ack_o = 0;
 always @(*) begin
     wbs_ack_o = (uart_wbs_ack_o | exmem_wbs_ack_o);
 
@@ -191,5 +160,74 @@ end
 
 
 endmodule	// user_project_wrapper
+
+module exmem #(
+    parameter BITS = 32,
+    parameter DELAYS=10
+)(
+`ifdef USE_POWER_PINS
+    inout vccd1,	// User area 1 1.8V supply
+    inout vssd1,	// User area 1 digital ground
+`endif
+
+    // Wishbone Slave ports (WB MI A)
+    input wb_clk_i,
+    input wb_rst_i,
+    input wbs_stb_i,
+    input wbs_cyc_i,
+    input wbs_we_i,
+    input [3:0] wbs_sel_i,
+    input [31:0] wbs_dat_i,
+    input [31:0] wbs_adr_i,
+    output reg wbs_ack_o,
+    output reg [31:0] wbs_dat_o
+
+);
+
+wire clk;
+wire rst;
+
+
+wire [BITS-1:0] bram_do;
+wire [BITS-1:0] bram_di;
+wire [BITS-1:0] bram_adr;
+wire bram_valid;
+wire [3:0] bram_we;
+
+assign bram_valid   = wbs_stb_i == 1 && wbs_cyc_i == 1 && wbs_adr_i[31:24] == 'h38;
+assign bram_we      = {4{wbs_we_i & bram_valid}};
+assign bram_adr     = (wbs_adr_i - 'h38000000) >> 2;
+assign bram_di      = wbs_dat_i;
+
+
+bram user_bram (
+    .CLK(wb_clk_i),
+    .WE0(bram_we),
+    .EN0(bram_valid),
+    .Di0(bram_di),
+    .Do0(bram_do),
+    .A0(bram_adr)
+);
+
+
+reg [15:0] counter; 
+
+always @(posedge wb_clk_i) begin
+    if (wb_rst_i) begin
+        counter     <= 0;
+        wbs_ack_o   <= 0;
+        wbs_dat_o   <= 0;
+    end else begin
+        counter     <= (counter == DELAYS) ? 0 : (bram_valid == 1 && wbs_ack_o != 1) ? counter + 1 : counter; 
+        wbs_ack_o   <= (counter == DELAYS) ? 1 : 0;
+        wbs_dat_o   <= (counter == DELAYS) ? bram_do : 0;
+    end
+end
+            
+
+
+endmodule
+
+
 
 `default_nettype wire

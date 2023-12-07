@@ -1,5 +1,5 @@
 # 0 "top.c"
-# 1 "/home/ubuntu/SoCLab/lab-wlos_baseline/testbench/top//"
+# 1 "/home/ubuntu/lab-wlos_baseline/testbench/top//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "top.c"
@@ -1665,111 +1665,7 @@ extern int uart_read();
 void main()
 {
 
- int j;
-
- (*(volatile uint32_t*)0x260000a0) = 0x1809;
- (*(volatile uint32_t*)0x2600009c) = 0x1809;
- (*(volatile uint32_t*)0x26000098) = 0x1809;
- (*(volatile uint32_t*)0x26000094) = 0x1809;
- (*(volatile uint32_t*)0x26000090) = 0x1809;
- (*(volatile uint32_t*)0x2600008c) = 0x1809;
- (*(volatile uint32_t*)0x26000088) = 0x1809;
- (*(volatile uint32_t*)0x26000084) = 0x1809;
- (*(volatile uint32_t*)0x26000080) = 0x1809;
- (*(volatile uint32_t*)0x2600007c) = 0x1809;
- (*(volatile uint32_t*)0x26000078) = 0x1809;
- (*(volatile uint32_t*)0x26000074) = 0x1809;
- (*(volatile uint32_t*)0x26000070) = 0x1809;
- (*(volatile uint32_t*)0x2600006c) = 0x1809;
- (*(volatile uint32_t*)0x26000068) = 0x1809;
- (*(volatile uint32_t*)0x26000064) = 0x1809;
-
- (*(volatile uint32_t*)0x26000060) = 0x1808;
- (*(volatile uint32_t*)0x2600005c) = 0x1808;
- (*(volatile uint32_t*)0x26000058) = 0x1808;
- (*(volatile uint32_t*)0x26000054) = 0x1808;
- (*(volatile uint32_t*)0x26000050) = 0x1808;
- (*(volatile uint32_t*)0x2600004c) = 0x1808;
- (*(volatile uint32_t*)0x26000048) = 0x1808;
- (*(volatile uint32_t*)0x26000044) = 0x1808;
- (*(volatile uint32_t*)0x26000040) = 0x1808;
- (*(volatile uint32_t*)0x26000038) = 0x1808;
- (*(volatile uint32_t*)0x26000034) = 0x1808;
- (*(volatile uint32_t*)0x26000030) = 0x1808;
- (*(volatile uint32_t*)0x2600002c) = 0x1808;
- (*(volatile uint32_t*)0x26000028) = 0x1808;
- (*(volatile uint32_t*)0x26000024) = 0x1808;
-
- (*(volatile uint32_t*)0x2600003c) = 0x1809;
-
-
- (*(volatile uint32_t*) (0xf0000000L + 0x6000L)) = 1;
-
-
- (*(volatile uint32_t*)0x26000000) = 1;
- while ((*(volatile uint32_t*)0x26000000) == 1);
-
- (*(volatile uint32_t*) ((0xf0000000L + 0x3010L) + 12)) = (*(volatile uint32_t*) ((0xf0000000L + 0x3000L) + 12)) = 0x00000000;
- (*(volatile uint32_t*) ((0xf0000000L + 0x3010L) + 8)) = (*(volatile uint32_t*) ((0xf0000000L + 0x3000L) + 8)) = 0xFFFFFFFF;
- (*(volatile uint32_t*) ((0xf0000000L + 0x3010L) + 4)) = (*(volatile uint32_t*) ((0xf0000000L + 0x3000L) + 4)) = 0x00000000;
- (*(volatile uint32_t*) (0xf0000000L + 0x3010L)) = (*(volatile uint32_t*) (0xf0000000L + 0x3000L)) = 0x00000000;
-
-
- (*(volatile uint32_t*)0x2600000c) = 0xAB400000;
-
- (*(volatile uint32_t*) ((0xf0000000L + 0x3030L) + 8)) = 0x00000000;
-
- (*(volatile uint32_t*) ((0xf0000000L + 0x3010L) + 8)) = (*(volatile uint32_t*) ((0xf0000000L + 0x3000L) + 8)) = 0x00000000;
-
-
-
- int *tmp = matmul();
- (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
-
- (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
- (*(volatile uint32_t*)0x2600000c) = 0xAB510000;
-
-
-
- (*(volatile uint32_t*)0x2600000c) = 0xAB400000;
- tmp = fir();
- (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+4) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+5) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+6) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+7) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+8) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+10) << 16;
- (*(volatile uint32_t*)0x2600000c) = 0xAB510000;
-
-
- (*(volatile uint32_t*)0x2600000c) = 0xAB400000;
- tmp = qsort();
- (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+4) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+5) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+6) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+7) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+8) << 16;
- (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
- (*(volatile uint32_t*)0x2600000c) = 0xAB510000;
- (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
-
-
-
     int mask;
-
-    (*(volatile uint32_t*) (0xf0000000L + 0x3800L)) = 1;
 
     (*(volatile uint32_t*)0x260000a0) = 0x1809;
     (*(volatile uint32_t*)0x2600009c) = 0x1809;
@@ -1808,6 +1704,17 @@ void main()
 
 
 
+
+
+
+ mask = irq_getmask();
+ mask |= 1 << 2;
+ irq_setmask(mask);
+
+ user_irq_0_ev_enable_write(1);
+
+
+
  (*(volatile uint32_t*)0x26000000) = 1;
  while ((*(volatile uint32_t*)0x26000000) == 1);
 
@@ -1822,14 +1729,48 @@ void main()
  (*(volatile uint32_t*) ((0xf0000000L + 0x3030L) + 8)) = 0x00000000;
 
  (*(volatile uint32_t*) ((0xf0000000L + 0x3010L) + 8)) = (*(volatile uint32_t*) ((0xf0000000L + 0x3000L) + 8)) = 0x00000000;
+
+ int j;
+
+ int *tmp = matmul();
+ (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
+
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
  (*(volatile uint32_t*)0x2600000c) = 0xAB510000;
 
 
 
- mask = irq_getmask();
- mask |= 1 << 2;
- irq_setmask(mask);
+ (*(volatile uint32_t*)0x2600000c) = 0xAB400000;
+ tmp = fir();
+ (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+4) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+5) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+6) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+7) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+8) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+10) << 16;
+ (*(volatile uint32_t*)0x2600000c) = 0xAB610000;
 
- user_irq_0_ev_enable_write(1);
 
+ (*(volatile uint32_t*)0x2600000c) = 0xAB400000;
+ tmp = qsort();
+ (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+1) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+2) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+3) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+4) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+5) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+6) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+7) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+8) << 16;
+ (*(volatile uint32_t*)0x2600000c) = *(tmp+9) << 16;
+ (*(volatile uint32_t*)0x2600000c) = 0xAB710000;
+ (*(volatile uint32_t*)0x2600000c) = *tmp << 16;
 }

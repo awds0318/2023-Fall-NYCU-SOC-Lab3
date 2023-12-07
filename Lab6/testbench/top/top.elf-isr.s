@@ -6,7 +6,7 @@
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
-	.file 0 "/home/ubuntu/SoCLab/lab-wlos_baseline/testbench/top" "../../firmware/isr.c"
+	.file 0 "/home/ubuntu/lab-wlos_baseline/testbench/top" "../../firmware/isr.c"
 	.align	2
 	.type	flush_cpu_icache, @function
 flush_cpu_icache:
@@ -836,5 +836,5 @@ isr:
 .LASF0:
 	.string	"../../firmware/isr.c"
 .LASF1:
-	.string	"/home/ubuntu/SoCLab/lab-wlos_baseline/testbench/top"
+	.string	"/home/ubuntu/lab-wlos_baseline/testbench/top"
 	.ident	"GCC: (g1ea978e3066) 12.1.0"

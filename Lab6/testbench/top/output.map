@@ -20,7 +20,7 @@ Linker script and memory map
 
                 0x0000000000000000                __DYNAMIC = 0x0
 
-.text           0x0000000010000000      0xee0
+.text           0x0000000010000000      0xb70
                 0x0000000010000000                _ftext = .
  *crt0*(.text)
  .text          0x0000000010000000      0x148 top.elf-crt0_vex.o
@@ -32,29 +32,29 @@ Linker script and memory map
  .text          0x0000000010000148      0x15c top.elf-isr.o
                 0x0000000010000238                isr
  .text          0x00000000100002a4       0x38 top.elf-func.o
- .text          0x00000000100002dc      0xc04 top.elf-top.o
+ .text          0x00000000100002dc      0x894 top.elf-top.o
                 0x000000001000037c                putchar
                 0x00000000100003e4                print
                 0x0000000010000488                main
 
-.mprj           0x0000000010000ee0      0x1ec
- .mprj          0x0000000010000ee0      0x1ec top.elf-func.o
-                0x0000000010000ee0                uart_write
-                0x0000000010000f28                uart_write_char
-                0x0000000010000f90                uart_write_string
-                0x0000000010000fe4                uart_read_char
-                0x0000000010001058                uart_read
+.mprj           0x0000000010000b70      0x1ec
+ .mprj          0x0000000010000b70      0x1ec top.elf-func.o
+                0x0000000010000b70                uart_write
+                0x0000000010000bb8                uart_write_char
+                0x0000000010000c20                uart_write_string
+                0x0000000010000c74                uart_read_char
+                0x0000000010000ce8                uart_read
 
-.rodata         0x00000000100010cc        0x4
-                0x00000000100010d0                . = ALIGN (0x8)
- *fill*         0x00000000100010cc        0x4 
-                0x00000000100010d0                _frodata = .
+.rodata         0x0000000010000d5c        0x4
+                0x0000000010000d60                . = ALIGN (0x8)
+ *fill*         0x0000000010000d5c        0x4 
+                0x0000000010000d60                _frodata = .
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  *(.rodata1)
-                0x00000000100010d0                . = ALIGN (0x8)
-                0x00000000100010d0                _erodata = .
+                0x0000000010000d60                . = ALIGN (0x8)
+                0x0000000010000d60                _erodata = .
 
-.data           0x0000000000000000      0x108 load address 0x00000000100010d0
+.data           0x0000000000000000      0x108 load address 0x0000000010000d60
                 0x0000000000000000                . = ALIGN (0x8)
                 0x0000000000000000                _fdata = .
  *(.data .data.* .gnu.linkonce.d.*)
@@ -77,7 +77,7 @@ Linker script and memory map
  *fill*         0x0000000000000104        0x4 
                 0x0000000000000108                _edata = .
 
-.bss            0x0000000000000108       0x98 load address 0x00000000100011d8
+.bss            0x0000000000000108       0x98 load address 0x0000000010000e68
                 0x0000000000000108                . = ALIGN (0x8)
                 0x0000000000000108                _fbss = .
  *(.dynsbss)
@@ -98,7 +98,7 @@ Linker script and memory map
                 0x00000000000001a0                _ebss = .
                 0x00000000000001a0                _end = .
 
-.mprjram        0x0000000038000000      0x540 load address 0x00000000100011d8
+.mprjram        0x0000000038000000      0x540 load address 0x0000000010000e68
                 0x0000000038000000                . = ALIGN (0x8)
                 0x0000000038000000                _fsram = .
  *libgcc.a:*(.text .text.*)
@@ -113,10 +113,10 @@ Linker script and memory map
                 0x0000000038000498                sort
                 0x000000003800050c                qsort
                 0x0000000000000600                PROVIDE (_fstack = (ORIGIN (dff2) + LENGTH (dff2)))
-                0x00000000100010d0                PROVIDE (_fdata_rom = LOADADDR (.data))
+                0x0000000010000d60                PROVIDE (_fdata_rom = LOADADDR (.data))
                 [!provide]                        PROVIDE (_edata_rom = (LOADADDR (.data) + SIZEOF (.data)))
                 0x0000000038000540                PROVIDE (_esram = (ORIGIN (mprjram) + SIZEOF (.mprjram)))
-                0x00000000100011d8                PROVIDE (_esram_rom = LOADADDR (.mprjram))
+                0x0000000010000e68                PROVIDE (_esram_rom = LOADADDR (.mprjram))
 LOAD top.elf-crt0_vex.o
 LOAD top.elf-isr.o
 LOAD top.elf-func.o
@@ -129,7 +129,7 @@ END GROUP
 LOAD /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a
 OUTPUT(top.elf elf32-littleriscv)
 
-.rela.dyn       0x0000000038000540        0x0 load address 0x0000000010001718
+.rela.dyn       0x0000000038000540        0x0 load address 0x00000000100013a8
  .rela.text     0x0000000038000540        0x0 top.elf-crt0_vex.o
 
 .riscv.attributes
@@ -151,28 +151,28 @@ OUTPUT(top.elf elf32-littleriscv)
  .comment       0x000000000000001b       0x1c top.elf-func.o
  .comment       0x000000000000001b       0x1c top.elf-top.o
 
-.debug_line     0x0000000000000000     0x1648
+.debug_line     0x0000000000000000     0x1328
  .debug_line    0x0000000000000000      0x20a top.elf-crt0_vex.o
  .debug_line    0x000000000000020a      0x151 top.elf-isr.o
  .debug_line    0x000000000000035b      0x63b top.elf-func.o
- .debug_line    0x0000000000000996      0xc38 top.elf-top.o
- .debug_line    0x00000000000015ce       0x7a /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+ .debug_line    0x0000000000000996      0x918 top.elf-top.o
+ .debug_line    0x00000000000012ae       0x7a /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
 .debug_line_str
-                0x0000000000000000      0x182
+                0x0000000000000000      0x17b
  .debug_line_str
-                0x0000000000000000       0x4e top.elf-crt0_vex.o
+                0x0000000000000000       0x47 top.elf-crt0_vex.o
  .debug_line_str
-                0x000000000000004e       0x8c top.elf-isr.o
-                                        0x10f (size before relaxing)
+                0x0000000000000047       0x8c top.elf-isr.o
+                                        0x101 (size before relaxing)
  .debug_line_str
-                0x00000000000000da        0x7 top.elf-func.o
-                                         0xd8 (size before relaxing)
+                0x00000000000000d3        0x7 top.elf-func.o
+                                         0xca (size before relaxing)
  .debug_line_str
-                0x00000000000000e1        0xd top.elf-top.o
-                                        0x107 (size before relaxing)
+                0x00000000000000da        0xd top.elf-top.o
+                                         0xf9 (size before relaxing)
  .debug_line_str
-                0x00000000000000ee       0x94 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+                0x00000000000000e7       0x94 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
 .debug_info     0x0000000000000000      0x830
  .debug_info    0x0000000000000000       0x25 top.elf-crt0_vex.o
@@ -200,15 +200,15 @@ OUTPUT(top.elf elf32-littleriscv)
  .debug_aranges
                 0x00000000000000e0       0x20 /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
 
-.debug_str      0x0000000000000000      0x322
- .debug_str     0x0000000000000000       0x5a top.elf-crt0_vex.o
- .debug_str     0x000000000000005a      0x139 top.elf-isr.o
+.debug_str      0x0000000000000000      0x31b
+ .debug_str     0x0000000000000000       0x53 top.elf-crt0_vex.o
+ .debug_str     0x0000000000000053      0x139 top.elf-isr.o
                                         0x17a (size before relaxing)
- .debug_str     0x0000000000000193       0xb8 top.elf-func.o
+ .debug_str     0x000000000000018c       0xb8 top.elf-func.o
                                         0x1dd (size before relaxing)
- .debug_str     0x000000000000024b       0x3a top.elf-top.o
+ .debug_str     0x0000000000000244       0x3a top.elf-top.o
                                         0x174 (size before relaxing)
- .debug_str     0x0000000000000285       0x9d /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
+ .debug_str     0x000000000000027e       0x9d /opt/riscv/lib/gcc/riscv32-unknown-elf/12.1.0/libgcc.a(muldi3.o)
                                          0xa9 (size before relaxing)
 
 .debug_frame    0x0000000000000000      0x4a0

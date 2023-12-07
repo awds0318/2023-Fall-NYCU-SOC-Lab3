@@ -1,5 +1,5 @@
 # 0 "../../firmware/isr.c"
-# 1 "/home/ubuntu/SoCLab/lab-wlos_baseline/testbench/top//"
+# 1 "/home/ubuntu/lab-wlos_baseline/testbench/top//"
 # 0 "<built-in>"
 # 0 "<command-line>"
 # 1 "../../firmware/isr.c"

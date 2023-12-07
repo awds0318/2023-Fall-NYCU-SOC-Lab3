@@ -1359,14 +1359,14 @@ current_run -synthesis [get_runs synth_1]
 
 # Create 'impl_1' run (if not found)
 if {[string equal [get_runs -quiet impl_1] ""]} {
-    create_run -name impl_1 -part xc7z020clg400-1 -flow {Vivado Implementation 2020} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset constrs_1 -parent_run synth_1
+    create_run -name impl_1 -part xc7z020clg400-1 -flow {Vivado Implementation 2020} -strategy "Performance_NetDelay_high" -report_strategy {No Reports} -constrset constrs_1 -parent_run synth_1
 } else {
-  set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+  set_property strategy "Performance_NetDelay_high" [get_runs impl_1]
   set_property flow "Vivado Implementation 2020" [get_runs impl_1]
 }
 set obj [get_runs impl_1]
 set_property set_report_strategy_name 1 $obj
-set_property report_strategy {Vivado Implementation Default Reports} $obj
+set_property report_strategy {Performance_NetDelay_high Reports} $obj
 set_property set_report_strategy_name 0 $obj
 # Create 'impl_1_init_report_timing_summary_0' report (if not found)
 if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0] "" ] } {
@@ -1566,7 +1566,7 @@ set_property -name "options.warn_on_violation" -value "1" -objects $obj
 }
 set obj [get_runs impl_1]
 set_property -name "auto_incremental_checkpoint.directory" -value "/home/tonyho/workspace_willy/caravel_fpga/project/vitis_prj/hls_read_romcode/D:/Caravel_Soc/vvd_caravel_fpga/vvd_caravel_fpga.srcs/utils_1/imports/impl_1" -objects $obj
-set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+set_property -name "strategy" -value "Performance_NetDelay_high" -objects $obj
 set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
 set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
 

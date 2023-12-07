@@ -6,7 +6,7 @@
 	.text
 .Ltext0:
 	.cfi_sections	.debug_frame
-	.file 0 "/home/ubuntu/SoCLab/lab-wlos_baseline/testbench/top" "top.c"
+	.file 0 "/home/ubuntu/lab-wlos_baseline/testbench/top" "top.c"
 	.align	2
 	.type	flush_cpu_icache, @function
 flush_cpu_icache:
@@ -300,415 +300,376 @@ main:
 	.cfi_offset 8, -8
 	addi	s0,sp,32
 	.cfi_def_cfa 8, 0
-	.loc 6 51 3
+	.loc 6 51 6
 	li	a5,637534208
 	addi	a5,a5,160
-	.loc 6 51 36
+	.loc 6 51 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 52 3
+	.loc 6 52 6
 	li	a5,637534208
 	addi	a5,a5,156
-	.loc 6 52 36
+	.loc 6 52 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 53 3
+	.loc 6 53 6
 	li	a5,637534208
 	addi	a5,a5,152
-	.loc 6 53 36
+	.loc 6 53 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 54 3
+	.loc 6 54 6
 	li	a5,637534208
 	addi	a5,a5,148
-	.loc 6 54 36
+	.loc 6 54 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 55 3
+	.loc 6 55 6
 	li	a5,637534208
 	addi	a5,a5,144
-	.loc 6 55 36
+	.loc 6 55 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 56 3
+	.loc 6 56 6
 	li	a5,637534208
 	addi	a5,a5,140
-	.loc 6 56 36
+	.loc 6 56 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 57 3
+	.loc 6 57 6
 	li	a5,637534208
 	addi	a5,a5,136
-	.loc 6 57 36
+	.loc 6 57 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 58 3
+	.loc 6 58 6
 	li	a5,637534208
 	addi	a5,a5,132
-	.loc 6 58 36
+	.loc 6 58 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 59 3
+	.loc 6 59 6
 	li	a5,637534208
 	addi	a5,a5,128
-	.loc 6 59 36
+	.loc 6 59 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 60 3
+	.loc 6 60 6
 	li	a5,637534208
 	addi	a5,a5,124
-	.loc 6 60 36
+	.loc 6 60 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 61 3
+	.loc 6 61 6
 	li	a5,637534208
 	addi	a5,a5,120
-	.loc 6 61 36
+	.loc 6 61 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 62 3
+	.loc 6 62 6
 	li	a5,637534208
 	addi	a5,a5,116
-	.loc 6 62 36
+	.loc 6 62 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 63 3
+	.loc 6 63 6
 	li	a5,637534208
 	addi	a5,a5,112
-	.loc 6 63 36
+	.loc 6 63 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 64 3
+	.loc 6 64 6
 	li	a5,637534208
 	addi	a5,a5,108
-	.loc 6 64 36
+	.loc 6 64 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 65 3
+	.loc 6 65 6
 	li	a5,637534208
 	addi	a5,a5,104
-	.loc 6 65 36
+	.loc 6 65 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 66 3
+	.loc 6 66 6
 	li	a5,637534208
 	addi	a5,a5,100
-	.loc 6 66 36
+	.loc 6 66 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 68 3
+	.loc 6 68 6
 	li	a5,637534208
 	addi	a5,a5,96
-	.loc 6 68 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 69 3
-	li	a5,637534208
-	addi	a5,a5,92
-	.loc 6 69 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 70 3
-	li	a5,637534208
-	addi	a5,a5,88
-	.loc 6 70 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 71 3
-	li	a5,637534208
-	addi	a5,a5,84
-	.loc 6 71 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 72 3
-	li	a5,637534208
-	addi	a5,a5,80
-	.loc 6 72 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 73 3
-	li	a5,637534208
-	addi	a5,a5,76
-	.loc 6 73 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 74 3
-	li	a5,637534208
-	addi	a5,a5,72
-	.loc 6 74 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 75 3
-	li	a5,637534208
-	addi	a5,a5,68
-	.loc 6 75 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 76 3
-	li	a5,637534208
-	addi	a5,a5,64
-	.loc 6 76 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 77 3
-	li	a5,637534208
-	addi	a5,a5,56
-	.loc 6 77 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 78 3
-	li	a5,637534208
-	addi	a5,a5,52
-	.loc 6 78 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 79 3
-	li	a5,637534208
-	addi	a5,a5,48
-	.loc 6 79 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 80 3
-	li	a5,637534208
-	addi	a5,a5,44
-	.loc 6 80 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 81 3
-	li	a5,637534208
-	addi	a5,a5,40
-	.loc 6 81 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 82 3
-	li	a5,637534208
-	addi	a5,a5,36
-	.loc 6 82 36
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 84 3
-	li	a5,637534208
-	addi	a5,a5,60
-	.loc 6 84 36
+	.loc 6 68 39
 	li	a4,8192
 	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 87 3
-	li	a5,-268410880
-	.loc 6 87 50
-	li	a4,1
-	sw	a4,0(a5)
-	.loc 6 90 3
+	.loc 6 69 6
 	li	a5,637534208
-	.loc 6 90 36
-	li	a4,1
+	addi	a5,a5,92
+	.loc 6 69 39
+	li	a4,8192
+	addi	a4,a4,-2039
 	sw	a4,0(a5)
-	.loc 6 91 8
-	nop
-.L16:
-	.loc 6 91 10 discriminator 1
+	.loc 6 70 6
 	li	a5,637534208
-	lw	a4,0(a5)
-	.loc 6 91 43 discriminator 1
-	li	a5,1
-	beq	a4,a5,.L16
-	.loc 6 93 60
-	li	a5,-268423168
-	addi	a4,a5,12
-	.loc 6 93 114
-	li	a5,0
-	sw	a5,0(a4)
-	.loc 6 93 3
-	li	a4,-268423168
-	addi	a4,a4,28
-	.loc 6 93 57
-	sw	a5,0(a4)
-	.loc 6 94 59
-	li	a5,-268423168
-	addi	a4,a5,8
-	.loc 6 94 112
-	li	a5,-1
-	sw	a5,0(a4)
-	.loc 6 94 3
-	li	a4,-268423168
-	addi	a4,a4,24
-	.loc 6 94 56
-	sw	a5,0(a4)
-	.loc 6 95 59
-	li	a5,-268423168
-	addi	a4,a5,4
-	.loc 6 95 112
-	li	a5,0
-	sw	a5,0(a4)
-	.loc 6 95 3
-	li	a4,-268423168
-	addi	a4,a4,20
-	.loc 6 95 56
-	sw	a5,0(a4)
-	.loc 6 96 53
-	li	a4,-268423168
-	.loc 6 96 100
-	li	a5,0
-	sw	a5,0(a4)
-	.loc 6 96 3
-	li	a4,-268423168
-	addi	a4,a4,16
-	.loc 6 96 50
-	sw	a5,0(a4)
+	addi	a5,a5,88
+	.loc 6 70 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 71 6
+	li	a5,637534208
+	addi	a5,a5,84
+	.loc 6 71 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 72 6
+	li	a5,637534208
+	addi	a5,a5,80
+	.loc 6 72 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 73 6
+	li	a5,637534208
+	addi	a5,a5,76
+	.loc 6 73 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 74 6
+	li	a5,637534208
+	addi	a5,a5,72
+	.loc 6 74 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 75 6
+	li	a5,637534208
+	addi	a5,a5,68
+	.loc 6 75 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 76 6
+	li	a5,637534208
+	addi	a5,a5,64
+	.loc 6 76 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 77 6
+	li	a5,637534208
+	addi	a5,a5,52
+	.loc 6 77 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 78 6
+	li	a5,637534208
+	addi	a5,a5,48
+	.loc 6 78 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 79 6
+	li	a5,637534208
+	addi	a5,a5,44
+	.loc 6 79 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 80 6
+	li	a5,637534208
+	addi	a5,a5,40
+	.loc 6 80 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 81 6
+	li	a5,637534208
+	addi	a5,a5,36
+	.loc 6 81 39
+	li	a4,8192
+	addi	a4,a4,-2039
+	sw	a4,0(a5)
+	.loc 6 83 6
+	li	a5,637534208
+	addi	a5,a5,60
+	.loc 6 83 39
+	li	a4,8192
+	addi	a4,a4,-2040
+	sw	a4,0(a5)
+	.loc 6 84 6
+	li	a5,637534208
+	addi	a5,a5,56
+	.loc 6 84 39
+	li	a4,1026
+	sw	a4,0(a5)
+	.loc 6 91 9
+	call	irq_getmask
+	mv	a5,a0
+	.loc 6 91 7
+	sw	a5,-20(s0)
+	.loc 6 92 7
+	lw	a5,-20(s0)
+	ori	a5,a5,4
+	sw	a5,-20(s0)
+	.loc 6 93 2
+	lw	a5,-20(s0)
+	mv	a0,a5
+	call	irq_setmask
+	.loc 6 95 2
+	li	a0,1
+	call	user_irq_0_ev_enable_write
 	.loc 6 99 3
 	li	a5,637534208
-	addi	a5,a5,12
 	.loc 6 99 36
-	li	a4,-1421869056
+	li	a4,1
 	sw	a4,0(a5)
-	.loc 6 101 3
+	.loc 6 100 8
+	nop
+.L16:
+	.loc 6 100 10 discriminator 1
+	li	a5,637534208
+	lw	a4,0(a5)
+	.loc 6 100 43 discriminator 1
+	li	a5,1
+	beq	a4,a5,.L16
+	.loc 6 102 60
 	li	a5,-268423168
-	addi	a5,a5,56
-	.loc 6 101 56
-	sw	zero,0(a5)
+	addi	a4,a5,12
+	.loc 6 102 114
+	li	a5,0
+	sw	a5,0(a4)
+	.loc 6 102 3
+	li	a4,-268423168
+	addi	a4,a4,28
+	.loc 6 102 57
+	sw	a5,0(a4)
 	.loc 6 103 59
 	li	a5,-268423168
 	addi	a4,a5,8
 	.loc 6 103 112
-	li	a5,0
+	li	a5,-1
 	sw	a5,0(a4)
 	.loc 6 103 3
 	li	a4,-268423168
 	addi	a4,a4,24
 	.loc 6 103 56
 	sw	a5,0(a4)
-	.loc 6 107 13
-	call	matmul
-	sw	a0,-20(s0)
-	.loc 6 108 38
-	lw	a5,-20(s0)
-	lw	a5,0(a5)
-	.loc 6 108 43
-	slli	a4,a5,16
+	.loc 6 104 59
+	li	a5,-268423168
+	addi	a4,a5,4
+	.loc 6 104 112
+	li	a5,0
+	sw	a5,0(a4)
+	.loc 6 104 3
+	li	a4,-268423168
+	addi	a4,a4,20
+	.loc 6 104 56
+	sw	a5,0(a4)
+	.loc 6 105 53
+	li	a4,-268423168
+	.loc 6 105 100
+	li	a5,0
+	sw	a5,0(a4)
+	.loc 6 105 3
+	li	a4,-268423168
+	addi	a4,a4,16
+	.loc 6 105 50
+	sw	a5,0(a4)
 	.loc 6 108 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 108 36
+	li	a4,-1421869056
 	sw	a4,0(a5)
-	.loc 6 109 43
-	lw	a5,-20(s0)
-	addi	a5,a5,4
-	.loc 6 109 38
-	lw	a5,0(a5)
-	.loc 6 109 47
-	slli	a4,a5,16
-	.loc 6 109 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 109 36
-	sw	a4,0(a5)
-	.loc 6 110 43
-	lw	a5,-20(s0)
-	addi	a5,a5,8
-	.loc 6 110 38
-	lw	a5,0(a5)
-	.loc 6 110 47
-	slli	a4,a5,16
 	.loc 6 110 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 110 36
-	sw	a4,0(a5)
-	.loc 6 111 43
-	lw	a5,-20(s0)
-	addi	a5,a5,12
-	.loc 6 111 38
+	li	a5,-268423168
+	addi	a5,a5,56
+	.loc 6 110 56
+	sw	zero,0(a5)
+	.loc 6 112 59
+	li	a5,-268423168
+	addi	a4,a5,8
+	.loc 6 112 112
+	li	a5,0
+	sw	a5,0(a4)
+	.loc 6 112 3
+	li	a4,-268423168
+	addi	a4,a4,24
+	.loc 6 112 56
+	sw	a5,0(a4)
+	.loc 6 116 13
+	call	matmul
+	sw	a0,-24(s0)
+	.loc 6 117 38
+	lw	a5,-24(s0)
 	lw	a5,0(a5)
-	.loc 6 111 47
+	.loc 6 117 43
 	slli	a4,a5,16
-	.loc 6 111 3
+	.loc 6 117 3
 	li	a5,637534208
 	addi	a5,a5,12
-	.loc 6 111 36
+	.loc 6 117 36
 	sw	a4,0(a5)
-	.loc 6 113 43
-	lw	a5,-20(s0)
-	addi	a5,a5,36
-	.loc 6 113 38
+	.loc 6 118 43
+	lw	a5,-24(s0)
+	addi	a5,a5,4
+	.loc 6 118 38
 	lw	a5,0(a5)
-	.loc 6 113 47
+	.loc 6 118 47
 	slli	a4,a5,16
-	.loc 6 113 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 113 36
-	sw	a4,0(a5)
-	.loc 6 114 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 114 36
-	li	a4,-1420754944
-	sw	a4,0(a5)
 	.loc 6 118 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 118 36
-	li	a4,-1421869056
 	sw	a4,0(a5)
-	.loc 6 119 8
-	call	fir
-	sw	a0,-20(s0)
-	.loc 6 120 38
-	lw	a5,-20(s0)
+	.loc 6 119 43
+	lw	a5,-24(s0)
+	addi	a5,a5,8
+	.loc 6 119 38
 	lw	a5,0(a5)
+	.loc 6 119 47
+	slli	a4,a5,16
+	.loc 6 119 3
+	li	a5,637534208
+	addi	a5,a5,12
+	.loc 6 119 36
+	sw	a4,0(a5)
 	.loc 6 120 43
+	lw	a5,-24(s0)
+	addi	a5,a5,12
+	.loc 6 120 38
+	lw	a5,0(a5)
+	.loc 6 120 47
 	slli	a4,a5,16
 	.loc 6 120 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 120 36
 	sw	a4,0(a5)
-	.loc 6 121 43
-	lw	a5,-20(s0)
-	addi	a5,a5,4
-	.loc 6 121 38
-	lw	a5,0(a5)
-	.loc 6 121 47
-	slli	a4,a5,16
-	.loc 6 121 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 121 36
-	sw	a4,0(a5)
 	.loc 6 122 43
-	lw	a5,-20(s0)
-	addi	a5,a5,8
+	lw	a5,-24(s0)
+	addi	a5,a5,36
 	.loc 6 122 38
 	lw	a5,0(a5)
 	.loc 6 122 47
@@ -718,84 +679,25 @@ main:
 	addi	a5,a5,12
 	.loc 6 122 36
 	sw	a4,0(a5)
-	.loc 6 123 43
-	lw	a5,-20(s0)
-	addi	a5,a5,12
-	.loc 6 123 38
-	lw	a5,0(a5)
-	.loc 6 123 47
-	slli	a4,a5,16
 	.loc 6 123 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 123 36
+	li	a4,-1420754944
 	sw	a4,0(a5)
-	.loc 6 124 43
-	lw	a5,-20(s0)
-	addi	a5,a5,16
-	.loc 6 124 38
-	lw	a5,0(a5)
-	.loc 6 124 47
-	slli	a4,a5,16
-	.loc 6 124 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 124 36
-	sw	a4,0(a5)
-	.loc 6 125 43
-	lw	a5,-20(s0)
-	addi	a5,a5,20
-	.loc 6 125 38
-	lw	a5,0(a5)
-	.loc 6 125 47
-	slli	a4,a5,16
-	.loc 6 125 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 125 36
-	sw	a4,0(a5)
-	.loc 6 126 43
-	lw	a5,-20(s0)
-	addi	a5,a5,24
-	.loc 6 126 38
-	lw	a5,0(a5)
-	.loc 6 126 47
-	slli	a4,a5,16
-	.loc 6 126 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 126 36
-	sw	a4,0(a5)
-	.loc 6 127 43
-	lw	a5,-20(s0)
-	addi	a5,a5,28
-	.loc 6 127 38
-	lw	a5,0(a5)
-	.loc 6 127 47
-	slli	a4,a5,16
 	.loc 6 127 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 127 36
+	li	a4,-1421869056
 	sw	a4,0(a5)
-	.loc 6 128 43
-	lw	a5,-20(s0)
-	addi	a5,a5,32
-	.loc 6 128 38
-	lw	a5,0(a5)
-	.loc 6 128 47
-	slli	a4,a5,16
-	.loc 6 128 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 128 36
-	sw	a4,0(a5)
-	.loc 6 129 43
-	lw	a5,-20(s0)
-	addi	a5,a5,36
+	.loc 6 128 8
+	call	fir
+	sw	a0,-24(s0)
 	.loc 6 129 38
+	lw	a5,-24(s0)
 	lw	a5,0(a5)
-	.loc 6 129 47
+	.loc 6 129 43
 	slli	a4,a5,16
 	.loc 6 129 3
 	li	a5,637534208
@@ -803,36 +705,83 @@ main:
 	.loc 6 129 36
 	sw	a4,0(a5)
 	.loc 6 130 43
-	lw	a5,-20(s0)
-	addi	a5,a5,40
+	lw	a5,-24(s0)
+	addi	a5,a5,4
 	.loc 6 130 38
 	lw	a5,0(a5)
-	.loc 6 130 48
+	.loc 6 130 47
 	slli	a4,a5,16
 	.loc 6 130 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 130 36
 	sw	a4,0(a5)
+	.loc 6 131 43
+	lw	a5,-24(s0)
+	addi	a5,a5,8
+	.loc 6 131 38
+	lw	a5,0(a5)
+	.loc 6 131 47
+	slli	a4,a5,16
 	.loc 6 131 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 131 36
-	li	a4,-1420754944
 	sw	a4,0(a5)
+	.loc 6 132 43
+	lw	a5,-24(s0)
+	addi	a5,a5,12
+	.loc 6 132 38
+	lw	a5,0(a5)
+	.loc 6 132 47
+	slli	a4,a5,16
+	.loc 6 132 3
+	li	a5,637534208
+	addi	a5,a5,12
+	.loc 6 132 36
+	sw	a4,0(a5)
+	.loc 6 133 43
+	lw	a5,-24(s0)
+	addi	a5,a5,16
+	.loc 6 133 38
+	lw	a5,0(a5)
+	.loc 6 133 47
+	slli	a4,a5,16
+	.loc 6 133 3
+	li	a5,637534208
+	addi	a5,a5,12
+	.loc 6 133 36
+	sw	a4,0(a5)
+	.loc 6 134 43
+	lw	a5,-24(s0)
+	addi	a5,a5,20
+	.loc 6 134 38
+	lw	a5,0(a5)
+	.loc 6 134 47
+	slli	a4,a5,16
 	.loc 6 134 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 134 36
-	li	a4,-1421869056
 	sw	a4,0(a5)
-	.loc 6 135 8
-	call	qsort
-	sw	a0,-20(s0)
-	.loc 6 136 38
-	lw	a5,-20(s0)
+	.loc 6 135 43
+	lw	a5,-24(s0)
+	addi	a5,a5,24
+	.loc 6 135 38
 	lw	a5,0(a5)
+	.loc 6 135 47
+	slli	a4,a5,16
+	.loc 6 135 3
+	li	a5,637534208
+	addi	a5,a5,12
+	.loc 6 135 36
+	sw	a4,0(a5)
 	.loc 6 136 43
+	lw	a5,-24(s0)
+	addi	a5,a5,28
+	.loc 6 136 38
+	lw	a5,0(a5)
+	.loc 6 136 47
 	slli	a4,a5,16
 	.loc 6 136 3
 	li	a5,637534208
@@ -840,8 +789,8 @@ main:
 	.loc 6 136 36
 	sw	a4,0(a5)
 	.loc 6 137 43
-	lw	a5,-20(s0)
-	addi	a5,a5,4
+	lw	a5,-24(s0)
+	addi	a5,a5,32
 	.loc 6 137 38
 	lw	a5,0(a5)
 	.loc 6 137 47
@@ -852,8 +801,8 @@ main:
 	.loc 6 137 36
 	sw	a4,0(a5)
 	.loc 6 138 43
-	lw	a5,-20(s0)
-	addi	a5,a5,8
+	lw	a5,-24(s0)
+	addi	a5,a5,36
 	.loc 6 138 38
 	lw	a5,0(a5)
 	.loc 6 138 47
@@ -864,436 +813,167 @@ main:
 	.loc 6 138 36
 	sw	a4,0(a5)
 	.loc 6 139 43
-	lw	a5,-20(s0)
-	addi	a5,a5,12
+	lw	a5,-24(s0)
+	addi	a5,a5,40
 	.loc 6 139 38
 	lw	a5,0(a5)
-	.loc 6 139 47
+	.loc 6 139 48
 	slli	a4,a5,16
 	.loc 6 139 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 139 36
 	sw	a4,0(a5)
-	.loc 6 140 43
-	lw	a5,-20(s0)
-	addi	a5,a5,16
-	.loc 6 140 38
-	lw	a5,0(a5)
-	.loc 6 140 47
-	slli	a4,a5,16
 	.loc 6 140 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 140 36
+	li	a4,-1419706368
 	sw	a4,0(a5)
-	.loc 6 141 43
-	lw	a5,-20(s0)
-	addi	a5,a5,20
-	.loc 6 141 38
-	lw	a5,0(a5)
-	.loc 6 141 47
-	slli	a4,a5,16
-	.loc 6 141 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 141 36
-	sw	a4,0(a5)
-	.loc 6 142 43
-	lw	a5,-20(s0)
-	addi	a5,a5,24
-	.loc 6 142 38
-	lw	a5,0(a5)
-	.loc 6 142 47
-	slli	a4,a5,16
-	.loc 6 142 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 142 36
-	sw	a4,0(a5)
-	.loc 6 143 43
-	lw	a5,-20(s0)
-	addi	a5,a5,28
-	.loc 6 143 38
-	lw	a5,0(a5)
-	.loc 6 143 47
-	slli	a4,a5,16
 	.loc 6 143 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 143 36
+	li	a4,-1421869056
 	sw	a4,0(a5)
-	.loc 6 144 43
-	lw	a5,-20(s0)
-	addi	a5,a5,32
-	.loc 6 144 38
-	lw	a5,0(a5)
-	.loc 6 144 47
-	slli	a4,a5,16
-	.loc 6 144 3
-	li	a5,637534208
-	addi	a5,a5,12
-	.loc 6 144 36
-	sw	a4,0(a5)
-	.loc 6 145 43
-	lw	a5,-20(s0)
-	addi	a5,a5,36
+	.loc 6 144 8
+	call	qsort
+	sw	a0,-24(s0)
 	.loc 6 145 38
+	lw	a5,-24(s0)
 	lw	a5,0(a5)
-	.loc 6 145 47
+	.loc 6 145 43
 	slli	a4,a5,16
 	.loc 6 145 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 145 36
 	sw	a4,0(a5)
+	.loc 6 146 43
+	lw	a5,-24(s0)
+	addi	a5,a5,4
+	.loc 6 146 38
+	lw	a5,0(a5)
+	.loc 6 146 47
+	slli	a4,a5,16
 	.loc 6 146 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 146 36
-	li	a4,-1420754944
 	sw	a4,0(a5)
-	.loc 6 147 38
-	lw	a5,-20(s0)
-	lw	a5,0(a5)
 	.loc 6 147 43
+	lw	a5,-24(s0)
+	addi	a5,a5,8
+	.loc 6 147 38
+	lw	a5,0(a5)
+	.loc 6 147 47
 	slli	a4,a5,16
 	.loc 6 147 3
 	li	a5,637534208
 	addi	a5,a5,12
 	.loc 6 147 36
 	sw	a4,0(a5)
-	.loc 6 153 6
-	li	a5,-268419072
-	addi	a5,a5,-2048
-	.loc 6 153 53
-	li	a4,1
-	sw	a4,0(a5)
-	.loc 6 155 6
+	.loc 6 148 43
+	lw	a5,-24(s0)
+	addi	a5,a5,12
+	.loc 6 148 38
+	lw	a5,0(a5)
+	.loc 6 148 47
+	slli	a4,a5,16
+	.loc 6 148 3
 	li	a5,637534208
-	addi	a5,a5,160
-	.loc 6 155 39
-	li	a4,8192
-	addi	a4,a4,-2039
+	addi	a5,a5,12
+	.loc 6 148 36
 	sw	a4,0(a5)
-	.loc 6 156 6
+	.loc 6 149 43
+	lw	a5,-24(s0)
+	addi	a5,a5,16
+	.loc 6 149 38
+	lw	a5,0(a5)
+	.loc 6 149 47
+	slli	a4,a5,16
+	.loc 6 149 3
 	li	a5,637534208
-	addi	a5,a5,156
-	.loc 6 156 39
-	li	a4,8192
-	addi	a4,a4,-2039
+	addi	a5,a5,12
+	.loc 6 149 36
 	sw	a4,0(a5)
-	.loc 6 157 6
+	.loc 6 150 43
+	lw	a5,-24(s0)
+	addi	a5,a5,20
+	.loc 6 150 38
+	lw	a5,0(a5)
+	.loc 6 150 47
+	slli	a4,a5,16
+	.loc 6 150 3
 	li	a5,637534208
-	addi	a5,a5,152
-	.loc 6 157 39
-	li	a4,8192
-	addi	a4,a4,-2039
+	addi	a5,a5,12
+	.loc 6 150 36
 	sw	a4,0(a5)
-	.loc 6 158 6
+	.loc 6 151 43
+	lw	a5,-24(s0)
+	addi	a5,a5,24
+	.loc 6 151 38
+	lw	a5,0(a5)
+	.loc 6 151 47
+	slli	a4,a5,16
+	.loc 6 151 3
 	li	a5,637534208
-	addi	a5,a5,148
-	.loc 6 158 39
-	li	a4,8192
-	addi	a4,a4,-2039
+	addi	a5,a5,12
+	.loc 6 151 36
 	sw	a4,0(a5)
-	.loc 6 159 6
+	.loc 6 152 43
+	lw	a5,-24(s0)
+	addi	a5,a5,28
+	.loc 6 152 38
+	lw	a5,0(a5)
+	.loc 6 152 47
+	slli	a4,a5,16
+	.loc 6 152 3
 	li	a5,637534208
-	addi	a5,a5,144
-	.loc 6 159 39
-	li	a4,8192
-	addi	a4,a4,-2039
+	addi	a5,a5,12
+	.loc 6 152 36
 	sw	a4,0(a5)
-	.loc 6 160 6
+	.loc 6 153 43
+	lw	a5,-24(s0)
+	addi	a5,a5,32
+	.loc 6 153 38
+	lw	a5,0(a5)
+	.loc 6 153 47
+	slli	a4,a5,16
+	.loc 6 153 3
 	li	a5,637534208
-	addi	a5,a5,140
-	.loc 6 160 39
-	li	a4,8192
-	addi	a4,a4,-2039
+	addi	a5,a5,12
+	.loc 6 153 36
 	sw	a4,0(a5)
-	.loc 6 161 6
-	li	a5,637534208
-	addi	a5,a5,136
-	.loc 6 161 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 162 6
-	li	a5,637534208
-	addi	a5,a5,132
-	.loc 6 162 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 163 6
-	li	a5,637534208
-	addi	a5,a5,128
-	.loc 6 163 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 164 6
-	li	a5,637534208
-	addi	a5,a5,124
-	.loc 6 164 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 165 6
-	li	a5,637534208
-	addi	a5,a5,120
-	.loc 6 165 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 166 6
-	li	a5,637534208
-	addi	a5,a5,116
-	.loc 6 166 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 167 6
-	li	a5,637534208
-	addi	a5,a5,112
-	.loc 6 167 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 168 6
-	li	a5,637534208
-	addi	a5,a5,108
-	.loc 6 168 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 169 6
-	li	a5,637534208
-	addi	a5,a5,104
-	.loc 6 169 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 170 6
-	li	a5,637534208
-	addi	a5,a5,100
-	.loc 6 170 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 172 6
-	li	a5,637534208
-	addi	a5,a5,96
-	.loc 6 172 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 173 6
-	li	a5,637534208
-	addi	a5,a5,92
-	.loc 6 173 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 174 6
-	li	a5,637534208
-	addi	a5,a5,88
-	.loc 6 174 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 175 6
-	li	a5,637534208
-	addi	a5,a5,84
-	.loc 6 175 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 176 6
-	li	a5,637534208
-	addi	a5,a5,80
-	.loc 6 176 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 177 6
-	li	a5,637534208
-	addi	a5,a5,76
-	.loc 6 177 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 178 6
-	li	a5,637534208
-	addi	a5,a5,72
-	.loc 6 178 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 179 6
-	li	a5,637534208
-	addi	a5,a5,68
-	.loc 6 179 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 180 6
-	li	a5,637534208
-	addi	a5,a5,64
-	.loc 6 180 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 181 6
-	li	a5,637534208
-	addi	a5,a5,52
-	.loc 6 181 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 182 6
-	li	a5,637534208
-	addi	a5,a5,48
-	.loc 6 182 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 183 6
-	li	a5,637534208
-	addi	a5,a5,44
-	.loc 6 183 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 184 6
-	li	a5,637534208
-	addi	a5,a5,40
-	.loc 6 184 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 185 6
-	li	a5,637534208
+	.loc 6 154 43
+	lw	a5,-24(s0)
 	addi	a5,a5,36
-	.loc 6 185 39
-	li	a4,8192
-	addi	a4,a4,-2039
-	sw	a4,0(a5)
-	.loc 6 187 6
-	li	a5,637534208
-	addi	a5,a5,60
-	.loc 6 187 39
-	li	a4,8192
-	addi	a4,a4,-2040
-	sw	a4,0(a5)
-	.loc 6 188 6
-	li	a5,637534208
-	addi	a5,a5,56
-	.loc 6 188 39
-	li	a4,1026
-	sw	a4,0(a5)
-	.loc 6 192 3
-	li	a5,637534208
-	.loc 6 192 36
-	li	a4,1
-	sw	a4,0(a5)
-	.loc 6 193 8
-	nop
-.L17:
-	.loc 6 193 10 discriminator 1
-	li	a5,637534208
-	lw	a4,0(a5)
-	.loc 6 193 43 discriminator 1
-	li	a5,1
-	beq	a4,a5,.L17
-	.loc 6 195 60
-	li	a5,-268423168
-	addi	a4,a5,12
-	.loc 6 195 114
-	li	a5,0
-	sw	a5,0(a4)
-	.loc 6 195 3
-	li	a4,-268423168
-	addi	a4,a4,28
-	.loc 6 195 57
-	sw	a5,0(a4)
-	.loc 6 196 59
-	li	a5,-268423168
-	addi	a4,a5,8
-	.loc 6 196 112
-	li	a5,-1
-	sw	a5,0(a4)
-	.loc 6 196 3
-	li	a4,-268423168
-	addi	a4,a4,24
-	.loc 6 196 56
-	sw	a5,0(a4)
-	.loc 6 197 59
-	li	a5,-268423168
-	addi	a4,a5,4
-	.loc 6 197 112
-	li	a5,0
-	sw	a5,0(a4)
-	.loc 6 197 3
-	li	a4,-268423168
-	addi	a4,a4,20
-	.loc 6 197 56
-	sw	a5,0(a4)
-	.loc 6 198 53
-	li	a4,-268423168
-	.loc 6 198 100
-	li	a5,0
-	sw	a5,0(a4)
-	.loc 6 198 3
-	li	a4,-268423168
-	addi	a4,a4,16
-	.loc 6 198 50
-	sw	a5,0(a4)
-	.loc 6 201 3
+	.loc 6 154 38
+	lw	a5,0(a5)
+	.loc 6 154 47
+	slli	a4,a5,16
+	.loc 6 154 3
 	li	a5,637534208
 	addi	a5,a5,12
-	.loc 6 201 36
-	li	a4,-1421869056
+	.loc 6 154 36
 	sw	a4,0(a5)
-	.loc 6 203 3
-	li	a5,-268423168
-	addi	a5,a5,56
-	.loc 6 203 56
-	sw	zero,0(a5)
-	.loc 6 205 59
-	li	a5,-268423168
-	addi	a4,a5,8
-	.loc 6 205 112
-	li	a5,0
-	sw	a5,0(a4)
-	.loc 6 205 3
-	li	a4,-268423168
-	addi	a4,a4,24
-	.loc 6 205 56
-	sw	a5,0(a4)
-	.loc 6 206 3
+	.loc 6 155 3
 	li	a5,637534208
 	addi	a5,a5,12
-	.loc 6 206 36
-	li	a4,-1420754944
+	.loc 6 155 36
+	li	a4,-1418657792
 	sw	a4,0(a5)
-	.loc 6 210 9
-	call	irq_getmask
-	mv	a5,a0
-	.loc 6 210 7
-	sw	a5,-24(s0)
-	.loc 6 211 7
+	.loc 6 156 38
 	lw	a5,-24(s0)
-	ori	a5,a5,4
-	sw	a5,-24(s0)
-	.loc 6 212 2
-	lw	a5,-24(s0)
-	mv	a0,a5
-	call	irq_setmask
-	.loc 6 214 2
-	li	a0,1
-	call	user_irq_0_ev_enable_write
-	.loc 6 216 1
+	lw	a5,0(a5)
+	.loc 6 156 43
+	slli	a4,a5,16
+	.loc 6 156 3
+	li	a5,637534208
+	addi	a5,a5,12
+	.loc 6 156 36
+	sw	a4,0(a5)
+	.loc 6 157 1
 	nop
 	lw	ra,28(sp)
 	.cfi_restore 1
@@ -1404,27 +1084,27 @@ main:
 	.byte	0x1
 	.byte	0x9c
 	.4byte	0xee
+	.byte	0x6
+	.4byte	.LASF13
+	.byte	0x6
+	.byte	0x31
+	.byte	0x9
+	.4byte	0x6a
+	.byte	0x2
+	.byte	0x91
+	.byte	0x6c
 	.byte	0xf
 	.string	"j"
 	.byte	0x6
-	.byte	0x31
+	.byte	0x72
 	.byte	0x6
 	.4byte	0x6a
 	.byte	0x10
 	.string	"tmp"
 	.byte	0x6
-	.byte	0x6b
+	.byte	0x74
 	.byte	0x7
 	.4byte	0x88
-	.byte	0x2
-	.byte	0x91
-	.byte	0x6c
-	.byte	0x6
-	.4byte	.LASF13
-	.byte	0x6
-	.byte	0x97
-	.byte	0x9
-	.4byte	0x6a
 	.byte	0x2
 	.byte	0x91
 	.byte	0x68
@@ -2022,8 +1702,8 @@ main:
 .LASF2:
 	.string	"signed char"
 	.section	.debug_line_str,"MS",@progbits,1
-.LASF1:
-	.string	"/home/ubuntu/SoCLab/lab-wlos_baseline/testbench/top"
 .LASF0:
 	.string	"top.c"
+.LASF1:
+	.string	"/home/ubuntu/lab-wlos_baseline/testbench/top"
 	.ident	"GCC: (g1ea978e3066) 12.1.0"
