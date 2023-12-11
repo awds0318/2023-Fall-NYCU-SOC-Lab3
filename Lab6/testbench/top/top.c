@@ -152,7 +152,7 @@ void main()
 	reg_mprj_datal = *(tmp+7) << 16;
 	reg_mprj_datal = *(tmp+8) << 16;
 	reg_mprj_datal = *(tmp+9) << 16;	
+	// reg_mprj_datal = *tmp << 16;
 	reg_mprj_datal = 0xAB710000;
-	reg_mprj_datal = *tmp << 16;
 }
 
